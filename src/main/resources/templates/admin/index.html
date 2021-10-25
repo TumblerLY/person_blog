@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>博客管理</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/resource/static/css/me.css}">
+</head>
+<body>
+
+<!--导航-->
+   <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
+       <div class="ui container">
+           <div class="ui inverted secondary stackable menu">
+               <h2 class="ui teal header item">管理后台</h2>
+               <a th:href="@{/admin/blogs}" class="m-item item m-mobile-hide"><i class="mini home icon"></i>&nbsp; 博客</a>
+               <a th:href="@{/admin/types}" class="m-item item m-mobile-hide"><i class="mini idea icon"></i>&nbsp; 分类</a>
+               <a th:href="@{/admin/tags}" class=" active m-item item m-mobile-hide"><i class="mini tags icon"></i>&nbsp; 标签</a>
+               <div class="right m-item m-mobile-hide menu">
+                   <div class="ui dropdown item">
+                       <div class="text">
+                           <img src="../../static/images/2.jpg" th:src="@{/images/2.jpg}" alt="" class="ui avatar image" style="width: 30px">
+                            龙洋
+                       </div>
+                       <i class="dropdown icon"></i>
+                       <div class="menu">
+                           <a href="#" class="item" th:href="@{/admin/logout}">注销</a>
+                           <a href="#" class="item">切换账号</a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+    </nav>
+   <div class="ui attached pointing menu">
+     <div class="ui container">
+           <div class="right menu">
+               <a href="#" class="item">发布</a>
+               <a href="#" class=" active teal item">列表</a>
+           </div>
+     </div>
+   </div>
+<!--内容头部-->
+<div class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+        <div class="ui  success  large  message">
+            <h2>Hi,</h2>
+            <p>龙洋,欢迎登录</p>
+        </div>
+        <img src="https://unsplash.it/1000/1400?imgae=1002" alt="" class="ui rounded image">
+    </div>
+    </div>
+
+</div>
+<!--底部内容-->
+<footer class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided  stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img  th:src="@{/images/wechat.jpg}" class="ui rounded image" alt="" style="width: 110px">
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced m-opacity-mini">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">用户故事(User Story)</a>
+                    <a href="#" class="item">Java那点事</a>
+                    <a href="https://www.baidu.com" class="item">百度贴吧</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced m-opacity-mini">联系我</h4>
+                    <a href="#" class="item">1435368652@qq.com</a>
+                    <a href="#" class="item">19150124394</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                  <h4 class="ui inverted header">最新博客</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini">这个是我的个人博客，还希望喜欢的小伙伴可以关注一下</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider">
+            <br>
+            <br>
+            <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright©2020-2021 Tumbler by Longyang</p>
+        </div>
+    </div>
+
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script>
+
+    // 顶部隐藏按钮
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.ui.dropdown').dropdown();
+
+</script>
+</body>
+</html>
